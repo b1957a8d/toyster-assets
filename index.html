@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>toyster.ru форум - Powered by vBulletin</title>
+<style>
+   html, body { margin: 0; height: 100%; overflow: hidden; background: #e1e1e1; }
+
+   /* Размытый «форум»: скриншот по центру, на серой подложке */
+  .bg {
+    position: fixed;
+    inset: -40px;                        /* запас, чтобы blur не светлил края */
+    background: #e1e1e1 url("https://toyster.ru/bg.jpg") no-repeat center top;
+    background-size: cover;              /* заполняет окно, сохраняя пропорции */
+    filter: blur(4px);
+  }
+
+  /* Белая полоса с логотипом и текстом */
+  .band {
+    position: fixed;
+    left: 0; right: 0; top: 50%;
+    transform: translateY(-50%);
+    padding: 28px 16px;
+    background: rgba(255,255,255,.94);
+    text-align: center;
+    font-family: -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  }
+  .band img { display: block; margin: 0 auto 12px; max-width: 80%; height: auto; width: 260px; }
+  .band p {
+    margin: 0;
+    font-size: clamp(14px, 1.6vw, 18px);   /* было clamp(18px, 3vw, 32px) */
+    line-height: 1.5;
+    color: #9aa7b3;
+  }
+</style>
+</head>
+<body>
+  <div class="bg" role="presentation"></div>
+  <div class="band">
+    <img alt="www.toyster.ru" src="https://toyster.ru/logo.png">
+    <p>Форум закрыт. Если вам нужные какие-то данные, то вы точно знаете к кому обратиться.</p>
+  </div>
+</body>
+</html>
